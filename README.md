@@ -2,7 +2,8 @@
 
 A small jQuery plugin for `textarea`, `password` and `text` inputs.  This plugin was designed to take care of nagging issues for inputs like backwards compatability with placeholders for unsupported browsers (including password fields), labels and styling.  Since we are already applying the plugin for placeholders we might as well apply some other things as well.
 
-[View the wInput demo here](http://winput.websanova.com)
+* [View the wInput demo](http://winput.websanova.com)
+* [Download the lastest version of wInput](https://github.com/websanova/wInput/tags)
 
 ## Related Plugins
 
