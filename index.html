@@ -54,9 +54,14 @@
                 <script type="text/javascript" src="./wInput.js"></script>
                 <link rel="Stylesheet" type="text/css" href="./wInput.css" />
 
-                <input type="text" data-label="Username:" placeholder="Choose a unique username"/><br/>
-                <input type="password" data-label="Password:" placeholder="Type a password with minimum 8 characters"/><br/>
-                <textarea data-label="Bio:" placeholder="Write something about yourself"></textarea>
+                <label class="wLabel-left">Username:</label>
+                <input type="text" placeholder="Choose a unique username"/>
+                <br/>
+                <label class="wLabel-left">Password:</label>
+                <input type="password" placeholder="Type a password with minimum 8 characters"/>
+                <br/>
+                <label class="wLabel-left-top">Bio:</label>
+                <textarea placeholder="Write something about yourself"></textarea>
                 
                 <script type="text/javascript">
                     $('input:text, input:password, textarea').wInput();

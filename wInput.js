@@ -8,7 +8,7 @@
  * @license         This websanova wInput jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @github          http://github.com/websanova/wInput
- * @version         Version 1.0.0
+ * @version         Version 1.1.0
  *
  ******************************************/
 
@@ -28,7 +28,6 @@
             var _self = this;
             
             this.$el.addClass('wInput wInput-' + this.$el.prop('tagName').toLowerCase());
-            this.createLabel();
             this.setTheme(this.options.theme);
 
             if (!$.support.placeholder) {
@@ -51,24 +50,15 @@
                 });
             }
 
-            this.$el.focus(function(){ _self.onFocus(); });
-            this.$el.blur(function(){ _self.onBlur(); });
+            this.$el.focus(function(){ _self.onClick(); });
+            this.$el.blur(function(){ _self.onBlur('active'); });
+
+            this.$el.hover(
+                function(){ _self.onFocus('hover'); },
+                function(){ _self.onBlur('hover'); }
+            );
 
             return this.$el;
-        },
-
-        createLabel: function() {
-            var text = this.$el.attr('data-label');
-
-            if (text && text !== '') {
-                var id = this.$el.attr('id') || Math.random() * 100;
-
-                this.$el.attr('id', id);
-                this.$label = $('<label for="' + id + '" class="wLabel wLabel-theme-' + this.options.theme + ' wLabel-' + this.$el.prop('tagName').toLowerCase() + ' wLabel-' + this.options.labelPosition + '"></label>');
-
-                this.setLabel(text);
-                this.$el.before(this.$label);
-            }
         },
 
         togglePassword: function() {
@@ -88,8 +78,8 @@
                     }
                 }
 
-                $clone.blur(function(){ _self.onBlur(); });
-                $clone.focus(function(){ _self.onFocus(); });
+                $clone.blur(function(){ _self.onBlur('active'); });
+                $clone.focus(function(){ _self.onClick(); });
                 $clone.mousedown(function(e){ _self.onMousedown(e); });
                 $clone.keydown(function(e){ _self.onKeydown(e); });
                 $clone.keyup(function(e){ _self.onKeyup(e); });
@@ -105,25 +95,27 @@
             }
         },
 
-        onFocus: function() {
+        onClick: function() {
             if (!$.support.placeholder && this.phState === true) {
                 this.setInputPosition(0);
             }
 
+            this.onFocus('active');
+        },
+
+        onFocus: function(className) {
+            className = className || 'active';
+
             if (this.options.highlight) {
-                if (this.$label) {
-                    this.$label.addClass('wLabel-active');
-                }
-                this.$el.addClass('wInput-active');
+                this.$el.addClass('wInput-' + className);
             }
         },
 
-        onBlur: function() {
+        onBlur: function(className) {
+            className = className || 'active';
+
             if (this.options.highlight) {
-                if (this.$label) {
-                    this.$label.removeClass('wLabel-active');
-                }
-                this.$el.removeClass('wInput-active');
+                this.$el.removeClass('wInput-' + className);
             }
         },
 
@@ -180,10 +172,6 @@
         setTheme: function(theme) {
             this.$el.attr('class', this.$el.attr('class').replace(/wInput-theme-.+\s|wInput-theme-.+$/, ''));
             this.$el.addClass('wInput-theme-' + theme);
-        },
-
-        setLabel: function(text) {
-            this.$label.html(text);
         }
     };
     
@@ -241,7 +229,6 @@
     
     $.fn.wInput.defaults = {
         theme: 'classic',        // set theme for inputs
-        labelPosition: 'left',   // set position for label (left,top)
         highlight: true          // highlight field when selected
     };
     

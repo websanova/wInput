@@ -45,6 +45,14 @@ You can also optionally set the `data-label` attribute and a label will automati
 <input type="text" data-label="Username:" placeholder="Enter a username"/>
 ```
 
+### CSS labels
+
+Global CSS labels are also available in this plugin and can be used by setting an adding the class name `wLabel-left`, `wLabel-top` or `wLabel-left-top` to an element.
+
+```html
+<label class="wLabel-left">Label:</label>
+```
+
 
 ## Resources
 
