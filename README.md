@@ -5,8 +5,10 @@ A small jQuery plugin for `textarea`, `password` and `text` inputs.  This plugin
 * [View the wInput demo](http://winput.websanova.com)
 * [Download the lastest version of wInput](https://github.com/websanova/wInput/tags)
 
+
 ## Related Plugins
 
+* [wForm](http://wform.websanova.com) - See all the form plugins working together.
 * [wSelect](http://wselect.websanova.com) - Custom select boxes.
 * [wCheck](http://wcheck.websanova.com) - Radio and checkbox input plugin.
 * [wChar](http://wchar.websanova.com) - On the fly character counter for inputs.
