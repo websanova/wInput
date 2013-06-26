@@ -59,7 +59,7 @@ Global CSS labels are also available in this plugin and can be used by setting a
 ## Resources
 
 * [More jQuery plugins by Websanova](http://websanova.com/plugins)
-* [jQuery Plugin Development Boilerplate](http://www.websanova.com/blog/jquery/jquery-plugin-development-boilerplate)
+* [jQuery Plugin Development Boilerplate](http://wboiler.websanova.com)
 * [The Ultimate Guide to Writing jQuery Plugins](http://www.websanova.com/blog/jquery/the-ultimate-guide-to-writing-jquery-plugins)
 
 
