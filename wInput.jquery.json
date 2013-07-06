@@ -1,6 +1,6 @@
 {
   "name": "wInput",
-  "title": "wInput",
+  "title": "wInput jQuery Input Plugin",
   "description": "A jQuery plugin for textarea, password and text inputs that handles common issues such as placeholders for unsupported browsers (including password fields), styling and labels.",
   "keywords": [
     "websanova",

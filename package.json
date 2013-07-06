@@ -1,0 +1,22 @@
+{
+  "name": "wInput",
+  "title": "wInput jQuery Input Plugin",
+  "version": "1.1.1",
+  "description": "A jQuery plugin for textarea, password and text inputs that handles common issues such as placeholders for unsupported browsers (including password fields), styling and labels.",
+  "main": "wInput.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/websanova/wInput"
+  },
+  "author": {
+    "name": "Websanova",
+    "email": "rob@websanova.com",
+    "url": "http://websanova.com"
+  },
+  "homepage" : "http://winput.websanova.com",
+  "license": "MIT, GPL",
+  "dependencies": {
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-jshint": ""
+  }
+}

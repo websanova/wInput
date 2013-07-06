@@ -1,17 +1,3 @@
-/******************************************
- * Websanova.com
- *
- * Resources for web entrepreneurs
- *
- * @author          Websanova
- * @copyright       Copyright (c) 2012 Websanova.
- * @license         This websanova wInput jQuery plug-in is dual licensed under the MIT and GPL licenses.
- * @link            http://www.websanova.com
- * @github          http://github.com/websanova/wInput
- * @version         Version 1.1.1
- *
- ******************************************/
-
 (function($) {
     
     function Input(el, options) {
@@ -21,7 +7,7 @@
         this.type = this.$el.prop('type').toLowerCase();
 
         this.generate();
-    };
+    }
     
     Input.prototype = {
         generate: function() {
